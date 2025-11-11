@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="2025-10-29-add-in-address-column-full_address.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="11-add-in-address-column-fullAddress.sql" relativeToChangelogFile="true"/>
+    <include file="12-create-index-for-Branch-and-Address.sql" relativeToChangelogFile="true"/>
+</databaseChangeLog>

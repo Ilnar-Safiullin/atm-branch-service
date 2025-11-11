@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  account-service:
+    image: atm_branch_service:1.0.0
+    build:
+      context: .
+      target: develop-runtime
+    ports:
+      - "8280:8280"
+    depends_on:
+      - postgres
+    environment:
+      - SERVER_PORT=8089
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/atm_branch_service_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=qwerty
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=atm_branch_service_db

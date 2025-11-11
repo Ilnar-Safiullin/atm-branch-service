@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="2025-08-29-create-location-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="01-create-location-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-create-city-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="02-create-city-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-create-address-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="03-create-address-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-create-work_shedule-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="04-create-work-schedule-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-create-branch-table.sq" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="05-create-branch-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-create-atm-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="06-create-atm-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-alter-branch_department-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="07-create-branch-department-table.sql" relativeToChangelogFile="true"/>
+
+    <!--=========================Static=========================================================================-->
+
+    <changeSet id="2025-08-29-insert-work_schedule-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/work_schedule"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-work-schedule-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-location-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/location"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-location-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-city-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/city"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-city-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-address-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/address"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-address-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-branch-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/branch"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-branch-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-atm-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/atm"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-atm-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-08-29-insert-branch_department-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/branch_department"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-branch-department-table.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="2025-09-11-truncate-work_shedule-table.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="08-truncate-work-schedule-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-11-update-work-schedule-week-day-column.sql" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db"/>
+    </changeSet>
+    <include file="09-update-work-schedule-week-day-column.sql" relativeToChangelogFile="true"/>
+
+    <!--=========================Static=========================================================================-->
+
+    <changeSet id="2025-09-11-insert-work_schedule-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/work_schedule"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-insert-work-schedule-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-23-insert-new-address-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/address"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-new-address-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-23-insert-new-branch-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/branch"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-new-branch-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-23-insert-new-atm-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/atm"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-new-atm-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-23-insert-new-branch-department-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/branch_department"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-new-branch-department-table.sql" relativeToChangelogFile="true"/>
+
+    <changeSet id="2025-09-23-insert-new-work_schedule-static-data" author="Сафиуллин Ильнар">
+        <tagDatabase tag="branch_atm_service_db/work_schedule"/>
+    </changeSet>
+    <include file="static-data-insert/static-data-insert-new-work-schedule-table.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
