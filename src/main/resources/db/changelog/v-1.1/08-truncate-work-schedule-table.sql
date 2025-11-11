@@ -1,0 +1,1 @@
+TRUNCATE TABLE work_schedule;

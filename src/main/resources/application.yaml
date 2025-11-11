@@ -1,0 +1,42 @@
+server:
+  port: ${SERVER_PORT:8280}
+
+spring:
+  application:
+    name: atm_branch_service
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5433/atm_branch_service_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:qwerty}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  sql:
+    init:
+      mode: always
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+
+logging:
+  level:
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+    org.springframework.orm.jpa: INFO
+    org.springframework.transaction: INFO
+    org.springframework.transaction.interceptor: TRACE
+    org.springframework.orm.jpa.JpaTransactionManager: DEBUG
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /atm_branch_service/swagger-ui.html
+
+eureka:
+  client:
+    enabled: false #отключено

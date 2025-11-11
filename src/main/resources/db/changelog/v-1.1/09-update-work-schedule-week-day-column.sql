@@ -1,0 +1,1 @@
+ALTER TABLE work_schedule ALTER COLUMN week_day TYPE INTEGER;
